@@ -9,6 +9,14 @@ Por exemplo, se um componente precisa acessar um banco de dados, o Spring se enc
 
 **Anotações:** O documento detalha anotações como `@Configuration`, `@Component`, `@Bean`, `@Autowired`, que são como etiquetas que você coloca nos seus componentes para dizer ao Spring como eles devem se comportar e se conectar.
 
+> `@Configuration` Esta anotação indica que uma classe é uma classe de configuração do Spring. Ela define métodos anotados com `@Bean` que produzem beans (objetos) que serão gerenciados pelo contêiner `IoC` (Inversão de Controle) do Spring. Em outras palavras, essa anotação transforma uma classe em uma fábrica de beans, permitindo que você configure e personalize a criação e o comportamento dos componentes da sua aplicação. 
+
+> `@Bean` Esta anotação é usada dentro de uma classe @Configuration para indicar que um método produz um bean que deve ser gerenciado pelo Spring. O nome do método geralmente se torna o ID do bean no contêiner IoC. Você pode usar essa anotação para configurar e personalizar os beans da sua aplicação, definindo suas propriedades e dependências.
+
+> `@Component` Esta anotação marca uma classe como um componente gerenciado pelo Spring. Isso significa que o Spring irá criar uma instância dessa classe (um bean) e gerenciará seu ciclo de vida. Essa anotação é genérica e pode ser usada para qualquer tipo de componente, como serviços, repositórios ou controladores.
+
+> `@Autowired` Esta anotação é usada para injetar automaticamente as dependências de um componente. Por exemplo, se você tiver um componente que precisa de um serviço de banco de dados, você pode usar @Autowired para que o Spring encontre e forneça a implementação correta do serviço de banco de dados para o seu componente. Isso reduz o acoplamento entre os componentes, tornando o código mais fácil de manter e testar.
+
 ## DWIII_10 - Criando Projeto em Spring Boot:
 Este documento é um guia passo a passo para criar um projeto Spring Boot do zero, sem usar a ferramenta Spring Initializr.
 
